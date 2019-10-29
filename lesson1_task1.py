@@ -1,4 +1,4 @@
-# encoding = 'utf-8'
+# coding: utf-8
 
 a = int(input("Введите первое число: "))
 b = int(input("Введите второе число: "))
