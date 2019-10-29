@@ -1,4 +1,4 @@
-# encoding = 'utf-8'
+# coding: utf-8
 
 revenue = int(input("Введите выручку: "))
 expence = int(input("Введите издержки: "))
