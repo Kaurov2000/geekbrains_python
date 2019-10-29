@@ -1,4 +1,4 @@
-# encoding = 'utf-8'
+# coding: utf-8
 
 n = input("Введите число от 1 до 9: ")
 
