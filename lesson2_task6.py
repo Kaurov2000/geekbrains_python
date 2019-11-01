@@ -11,17 +11,28 @@ while answer in answer_yes:
     goods_dict = {"название": None, "цена": None, "количество": None, "ед.": None}
     name =  input("Введите название товара: ")
     goods_dict["название"] = name
-    price = int(input("Введите цену товара: "))
-    goods_dict["цена"] = price
-    quantity = int(input("Введите количество товара: "))
-    goods_dict["количество"] = quantity
+    try:
+        price = int(input("Введите цену товара: "))
+        goods_dict["цена"] = price
+    except ValueError:
+        answer = input("Ошибка при вводе цены. Попробовать еще раз? ")
+        continue
+    try:
+        quantity = int(input("Введите количество товара: "))
+        goods_dict["количество"] = quantity
+    except ValueError:
+        answer = input("Ошибка при вводе цены. Попробовать еще раз? ")
+        continue
     unit = input("Введите единицу измерения товара: ")
     goods_dict["ед."] = unit
     i = i + 1
     goods_list.append((i,goods_dict))
     answer = input("Хотите ввести еще один товар? ").lower()
 
-answer = input("Сформировать аналитику? ").lower()
+if len(goods_list) > 0:
+    answer = input("Сформировать аналитику? ").lower()
+else:
+    answer = 'n'
 if answer in answer_yes:
     goods_dict = {"название": [], "цена": [], "количество": [], "ед.": []}
     for k in range(len(goods_list)):
