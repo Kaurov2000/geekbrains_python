@@ -1,6 +1,8 @@
 class Cell:
+    cell_counter = 0
     def __init__(self,units):
             self.units = units
+            Cell.cell_counter += 1
     def __add__(self, other):
         new_cell =  Cell(self.units + other.units)
         return new_cell
@@ -47,3 +49,4 @@ print(e.units)
 f = a / b
 print(f.units)
 print(c.make_order(6))
+print(e.cell_counter)
