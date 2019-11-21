@@ -21,7 +21,7 @@ class NumList:
 
 nlist = NumList()
 while True:
-    x = input(f"Введите {len(nlist.num_list)} элемент списка или пустую строку для выхода: ")
+    x = input(f"Введите {len(nlist.num_list) + 1}й элемент списка или пустую строку для выхода: ")
     if x == '':
        break
     else:
