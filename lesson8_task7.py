@@ -22,14 +22,18 @@ class ComplexNumber:
         new_im = (self.im * other.re - self.re * other.im) / (other.re ** 2 + other.im ** 2)
         return ComplexNumber(new_re,new_im)
 
-a = ComplexNumber(3,2)
-b = ComplexNumber(2,-3)
-c = a + b
-print(c)
-print(f"Проверка: ",complex(3,2) + complex(2,-3))
-d = a * b
-print(d)
-print(f"Проверка: ",complex(3,2) * complex(2,-3))
-e =  a / b
-print(e)
-print(f"Проверка: ",complex(3,2) / complex(2,-3))
+def main():
+    a = ComplexNumber(3,2)
+    b = ComplexNumber(2,-3)
+    c = a + b
+    print(c)
+    print(f"Проверка: ",complex(3,2) + complex(2,-3))
+    d = a * b
+    print(d)
+    print(f"Проверка: ",complex(3,2) * complex(2,-3))
+    e =  a / b
+    print(e)
+    print(f"Проверка: ",complex(3,2) / complex(2,-3))
+
+if __name__ == "__main__":
+    main()
